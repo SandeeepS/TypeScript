@@ -184,7 +184,18 @@
         // userName = "debug media";
             
 // keyof typeOf
+            // type StatusType = "pending" | "completed" | "failed"; without enum 
 
+            enum StatusType {
+                PENDING=1,              //provided capital letter due to a industry standard
+                COMPLETED,
+                FAILED,
+            }
+
+            function getStatus(orderId:string,status:StatusType){
+                console.log(orderId,"==",status);
+            }
+            getStatus("1234",StatusType.COMPLETED);
 //utility Types
 
 
